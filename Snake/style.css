@@ -1,0 +1,57 @@
+:root {
+    --size: 21
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #333;
+    width: 95vmin;
+    height: 95vmin;
+    display: flex;
+    flex-direction: column;
+}
+
+.gameInfo {
+    background-color: black;
+    color: white;
+    display: flex;
+    gap: 100px;
+    padding: 10px;
+}
+
+.highscoreContainer {
+    min-width: 100px;
+}
+
+.playground {
+    margin-top: auto;
+    width: 100%;
+    aspect-ratio: 1;
+    display: grid;
+    grid-template-columns: repeat(var(--size), 1fr);
+    grid-template-rows: repeat(var(--size), 1fr);
+}
+
+#head {
+    background-color: green;
+    grid-column: calc(var(--size) / 2);
+    grid-row: calc(var(--size) / 2);
+}
+
+#food {
+    background-color: red;
+    display: none;
+}
